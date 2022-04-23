@@ -2,10 +2,7 @@
 
 A Pen created on CodePen.io. Original URL: [https://codepen.io/Delos_343/pen/PoJZNXw](https://codepen.io/Delos_343/pen/PoJZNXw).
 
-Uses react and CSS animations to recreate the slot machine mini game from Super Mario Bros. 3.
+Uses React and CSS animations to recreate a slot machine minigame.
+Admittedly, this was a really weird tool to use. But I learned more about React, so not surprised at all.
 
-In hindsight,  this was a really weird tool for this job. But I learned a bit more about React, so I have that going for me.
-
-Some of the CSS is wonky as hell.
-
-Also, I am not claiming copyright to a game that was released when I was a toddler. It's just a tribute. Go easy, Nintendo.
+Some of the CSS is wonky as all hell too.
