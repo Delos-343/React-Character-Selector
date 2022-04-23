@@ -1,0 +1,187 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
+$color-body-bg: #0C0C0C;
+$color-game-bg: #FDCBC4;
+$color-message: #B53121;
+
+
+// .debug{
+//   position:fixed;
+//   bottom:0;
+//   right:0;
+//   left:0;
+//   background:white;
+//   color:black;
+// }
+
+
+body {
+  font-family: 'Black Ops One', sans-serif;
+  background:$color-body-bg;
+  
+  &:after {
+    content:'';
+    display:block;
+    position:fixed;
+    top:40%; bottom:44%;
+    right:18%; left:18%;
+    border: .15vw solid #C0C0C0;
+    padding-top:39%;
+    border-radius: 1rem;
+    transform: translateY(-50%);
+    box-sizing: border-box;
+  }
+
+}
+
+.helper {
+  position:fixed;
+  bottom:3.5rem;
+  z-index:100;
+  color:#F1F1F1;
+  text-align:center;
+  right:0; left:0;
+  pointer-events:none;
+  font-size:3vw;
+  opacity:.75;
+}
+
+.viewport {
+  display:block;
+  position:fixed;
+  top:0; bottom:20%;
+  right:0; left:0;
+  width:100%;
+  overflow:hidden;
+  box-sizing:border-box;
+
+  &:before {
+    content:'';
+    display:block;
+    position:fixed;
+    top:0; bottom:0;
+    left:0;
+    width:20%;
+    background:$color-body-bg;
+    z-index:10; 
+  }
+
+  &:after {
+    content:'';
+    display:block;
+    position:fixed;
+    top:0; bottom:0;
+    right:0;
+    width:20%;
+    background:$color-body-bg;
+    z-index:10; 
+  }
+
+}
+
+.game {
+  position:absolute;
+  top:50%;
+  right:0; left:0;
+  transform:translateY(-50%);
+}
+
+
+.results {
+  position:absolute;
+  top:0; bottom:0;
+  right:0; left:0;
+  display:flex; 
+  align-items:center;
+  justify-content:center;
+  transform:translateY(100%);
+  transition: transform 1s ease;
+  color:$color-message;
+  font-size:6vw;
+  text-shadow: 2px 2px 2px #fff;
+
+  &.shown {
+    transform:translateY(0);
+  }
+}
+
+.columns {
+  background-color:$color-game-bg;
+  background-size:100% 100%;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+
+  &.columns-top {
+    background-image: url('https://i.postimg.cc/HkytncnD/Co-D-WZ-Mil-Sim-1.png');    
+  }  
+
+  &.columns-center {
+    background-image: url('https://i.postimg.cc/pdQYQwKs/Co-D-WZ-Mil-Sim-2.png');    
+  }    
+
+  &.columns-bottom {
+    background-image: url('https://i.postimg.cc/kg6TSYjH/Co-D-WZ-Mil-Sim-3.png');    
+  }  
+
+  &:after {
+    content:'';
+    display:block;
+    padding-top: 12.07%;
+  }
+}
+
+
+@keyframes ltr-transition-0 {
+  0%{
+    background-position: 0vw;
+  }
+  100%{
+    background-position: 33.3333vw;
+  }
+}
+
+@keyframes ltr-transition-1 {
+  0%{
+    background-position: 33.3333vw;
+  }
+  100%{
+    background-position:66.6666vw;
+  }
+}
+
+@keyframes ltr-transition-2 {
+  0%{
+    background-position: 66.6666vw;
+  }
+  100%{
+    background-position: 100vw;
+  }
+}
+
+@keyframes rtl-transition-0 {
+  0%{
+    background-position: -33.3333vw;
+  }
+  100%{
+    background-position: -66.6666vw;
+  }
+}
+
+@keyframes rtl-transition-1 {
+  0%{
+    background-position: -100vw;
+  }
+  100%{
+    background-position: -133.3333vw;
+  }
+}
+
+@keyframes rtl-transition-2 {
+  0%{
+    background-position: -166.6666vw;
+  }
+  100%{
+    background-position: -200vw;
+  }
+}
